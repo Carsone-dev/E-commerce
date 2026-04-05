@@ -20,7 +20,7 @@
             <div class="form-check">
                 {{ carrier.name }} <br>
                 {{ carrier.description }} <br>
-                {{ (carrier.price /100)  |number_format(2, ',' , '.') }} €
+                {{ (carrier.price /100)  |number_format(2, ',' , '.') }} F cfa
             </div>
 
         </div>
@@ -45,18 +45,18 @@
                             x {{ product.quantity }}
                         </div>
                         <div class="col-2 my-auto">
-                            {{ ((product.product.price * product.quantity) /100)|number_format(2, ',' , '.') }} €
+                            {{ ((product.product.price * product.quantity) /100)|number_format(2, ',' , '.') }} F cfa
                         </div>
                     </div>
                     {% set total = total + (product.product.price *product.quantity) %}
                 {% endfor %}
             </div>
             <hr>
-            <strong>Sous-Total : </strong> {{ (total /100)|number_format(2, ',' , '.') }} €<br>
-            <strong>Livraison : </strong> {{ (carrier.price /100)|number_format(2, ',' , '.') }} €
+            <strong>Sous-Total : </strong> {{ (total /100)|number_format(2, ',' , '.') }} F cfa <br>
+            <strong>Livraison : </strong> {{ (carrier.price /100)|number_format(2, ',' , '.') }} F cfa
             <hr>
-            <strong>Total : </strong> {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',' , '.') }} €<br>
-            <a class="btn btn-success btn-block mt-3" type="submit" id="checkout-button"> Payer | {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',' , '.') }} € </a>
+            <strong>Total : </strong> {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',' , '.') }} F cfa <br>
+            <a class="btn btn-success btn-block mt-3" type="submit" id="checkout-button"> Payer | {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',' , '.') }} F cfa </a>
         </div>
     </div>
 {% endblock %}

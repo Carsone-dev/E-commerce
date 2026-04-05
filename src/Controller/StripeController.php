@@ -26,7 +26,6 @@ class StripeController extends AbstractController
         if (!$order){
           new JsonResponse(['error' => 'order' ]);
         }
-
         foreach ($order->getOrderDetails()->getValues() as $product) {
             $product_object=$entityManager->getRepository(Product::class)->findOneByName($product->getProduct());
             $product_for_stripe[]=[

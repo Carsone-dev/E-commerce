@@ -31,10 +31,10 @@ class OrderSuccessController extends AbstractController
             $order->setState(1);
             $this->entityManager->flush();
             //Envoyer un email à notre client pour lui confirmer sa commande
-            $mail = new Mail();
-            $content = "Bonjour".$order->getUser()->getFirstname()."<br/>Merci pour votre commande<br/><br/> blablabla";
-            $mail->send($order->getUser()->getEmail(),$order->getFirstname(),"Votre commande la boutique .. est bien valide",$content);
-            dd($mail);
+//            $mail = new Mail();
+//            $content = "Bonjour".$order->getUser()->getFirstname()."<br/>Merci pour votre commande<br/><br/> blablabla";
+//            $mail->send($order->getUser()->getEmail(),$order->getFirstname(),"Votre commande la boutique .. est bien valide",$content);
+//            dd($mail);
         }
 
         //Afficher les quelques informations de la commande de l'utilisateur

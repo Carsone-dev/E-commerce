@@ -41,8 +41,8 @@
                 </a>
 
             </td>
-            <td>{{ (product.product.price /100)|number_format(2, ',' , '.') }} €</td>
-            <td>{{ ((product.product.price *product.quantity) /100)|number_format(2, ',' , '.') }} €</td>
+            <td>{{ (product.product.price /100)|number_format(2, ',' , '.') }} F cfa</td>
+            <td>{{ ((product.product.price *product.quantity) /100)|number_format(2, ',' , '.') }} F cfa</td>
             <td>
                 <a href="{{ path('delete_to_app_cart',{'id':product.product.id}) }}">
                     <img src="{{ asset('assets/imag/poubelle-de-recyclage.png') }}" alt="supprimer mon produit" height="25px">
@@ -56,7 +56,7 @@
     </table>
     <div class="text-right mb-5">
         <b>Nombre de produit : {{ cart|length }}</b> <br>
-        <b>Total de mon panier: {{ (total /100)|number_format(2, ',' , '.') }} €</b>
+        <b>Total de mon panier: {{ (total /100)|number_format(2, ',' , '.') }} F cfa</b>
         <a href="{{ path('order') }}" class="btn btn-success btn-block mt-3">Valider mon panier</a>
     </div>
 {% else %}
